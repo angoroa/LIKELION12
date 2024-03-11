@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* 글꼴 설정 */
+    display : flex; /* Flexbox 레이아웃을 사용하도록 설정 */
+    flex-direction:column; /* 세로로 설정 */
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+}
+.topDiv {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border: 1px red solid;
+    background-image: url('https://dhnews.co.kr/news/data/20221214/p1065579666649791_771_thum.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.profile {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.middlePictureDiv{
+    width:1200px;
+    height:600px;
+    background-image: url('https://i.namu.wiki/i/8dGsCBfEbo_raXvMheBc4kmblgSDXJatOG9z04qin1Urp7bH7tDY2UhO0vx2I6B2udXJGj8EEmSFxVVI3N3Vxw.webp');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
