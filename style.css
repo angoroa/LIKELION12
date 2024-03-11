@@ -20,7 +20,7 @@ body {
     text-align: center;
     padding-top: 2%;
     padding-bottom: 5%;
-    border: 1px red solid;
+    border: 1px rgb(27, 27, 139) solid;
     background-image: url('https://dhnews.co.kr/news/data/20221214/p1065579666649791_771_thum.jpg');
     background-size: cover;
     background-position: center;
