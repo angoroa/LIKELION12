@@ -3,6 +3,7 @@ package com.example.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name="comment_id")
     private Long id;
 
@@ -24,5 +26,7 @@ public class Comment {
     private Member member;
 
     private String content;
+
+    @CreationTimestamp
     private LocalDate commentDate;
 }

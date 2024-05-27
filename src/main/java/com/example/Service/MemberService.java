@@ -2,10 +2,12 @@ package com.example.Service;
 
 import com.example.Repository.MemberRepository;
 import com.example.domain.Member;
+import com.example.dto.MemberDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 @Service
@@ -27,5 +29,27 @@ public class MemberService {
     public Optional<Member> getMemberById(Long id) {
         return memberRepository.findById(id);
     }
+    @Transactional
+    public void deleteMember(Long id) {
+        memberRepository.deleteById(id);
+    }
+    @Transactional
+    public Member updateMember(Long id, MemberDto memberDto) {
+        Optional<Member> memberOptional = memberRepository.findById(id);
+        if (memberOptional.isPresent()) {
+            Member member = memberOptional.get();
+            if (memberDto.getName() != null) {
+                member.setName(memberDto.getName());
+            }
+            if (memberDto.getEmail() != null) {
+                member.setEmail(memberDto.getEmail());
+            }
+            return memberRepository.save(member);
+        } else {
+            throw new RuntimeException("Member not found with id " + id);
+
+        }
+    }
+
 
 }

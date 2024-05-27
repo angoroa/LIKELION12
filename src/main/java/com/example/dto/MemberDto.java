@@ -21,6 +21,7 @@ public class MemberDto {
         memberDto.setName(member.getName());
         memberDto.setEmail(member.getEmail());
         memberDto.setRegisterDate(member.getRegisterDate());
+
         return memberDto;
     }
 }

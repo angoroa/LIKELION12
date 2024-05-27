@@ -24,8 +24,10 @@ public class Post {
 
     private String title;
     private String content;
+
     @CreationTimestamp
     private LocalDateTime postDate;
+
 
     @OneToMany(mappedBy="post")
     private List<Comment> comments= new ArrayList<>();
